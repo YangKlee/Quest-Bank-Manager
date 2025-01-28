@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -60,7 +61,11 @@ namespace QuestBankManager_Project
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Data.loginUser.setUserName(null);   
+            Data.loginUser.setUserName(null);
+            if (File.Exists("logindata.dat"))
+            {
+                File.Delete("logindata.dat");
+            }
             login();
         }
 
@@ -89,12 +94,17 @@ namespace QuestBankManager_Project
 
         private void delete_bank_bt_Click(object sender, EventArgs e)
         {
-            if (Data.idbankaccess != null)
+            DialogResult dialogResult = MessageBox.Show("Khi xóa ngân hàng thì toàn bộ câu hỏi trong ngân hàng đều bị mất và không thể khôi phục.\n Are you ready", "Cẩn thận nè", MessageBoxButtons.YesNo, icon:MessageBoxIcon.Warning);
+
+            if (Data.idbankaccess != null )
             {
+                if (dialogResult == DialogResult.Yes)
+                {
                     SQLConnection conn = new SQLConnection();
                     MySqlCommand cmd = new MySqlCommand("delete from questbank where idbank = @id;", conn.getConnection());
                     cmd.Parameters.AddWithValue("@id", Data.idbankaccess);
                     cmd.ExecuteNonQuery();
+                }
             }
             else
             {
@@ -123,6 +133,7 @@ namespace QuestBankManager_Project
 
         private void button2_Click(object sender, EventArgs e)
         {
+            find_bt.Text = null;
             loadBank();
         }
 
@@ -144,6 +155,11 @@ namespace QuestBankManager_Project
                 }
                 //loadBank();
             }
+        }
+
+        private void edit_bank_bt_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Dev lười code tính năng này\nQua tết làm :)))", "Lỗi!", MessageBoxButtons.OK,icon:MessageBoxIcon.Error);
         }
     }
 }

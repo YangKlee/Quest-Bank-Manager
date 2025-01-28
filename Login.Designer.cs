@@ -37,6 +37,7 @@
             this.passTB = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +58,7 @@
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label1.Location = new System.Drawing.Point(124, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(292, 30);
+            this.label1.Size = new System.Drawing.Size(340, 30);
             this.label1.TabIndex = 1;
             this.label1.Text = "Đăng nhập hệ thống";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -120,11 +121,22 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(13, 133);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(132, 17);
+            this.checkBox1.TabIndex = 7;
+            this.checkBox1.Text = "Lưu lịch sử đăng nhập";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(476, 159);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.passTB);
@@ -156,7 +168,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox usernameTB;
         private System.Windows.Forms.TextBox passTB;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.CheckBox checkBox1;
+        public System.Windows.Forms.Button button1;
     }
 }

@@ -330,9 +330,10 @@
             // 
             // smart_cp_cb
             // 
+            this.smart_cp_cb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.smart_cp_cb.AutoSize = true;
             this.smart_cp_cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.smart_cp_cb.Location = new System.Drawing.Point(463, 44);
+            this.smart_cp_cb.Location = new System.Drawing.Point(465, 40);
             this.smart_cp_cb.Name = "smart_cp_cb";
             this.smart_cp_cb.Size = new System.Drawing.Size(167, 22);
             this.smart_cp_cb.TabIndex = 11;

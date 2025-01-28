@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuestManager));
             this.questTable = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.find_tb = new System.Windows.Forms.TextBox();
@@ -64,7 +65,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 19);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(215, 18);
             this.label1.TabIndex = 1;
@@ -74,7 +75,7 @@
             // 
             this.find_tb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.find_tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.find_tb.Location = new System.Drawing.Point(243, 12);
+            this.find_tb.Location = new System.Drawing.Point(243, 7);
             this.find_tb.Name = "find_tb";
             this.find_tb.Size = new System.Drawing.Size(195, 24);
             this.find_tb.TabIndex = 2;
@@ -82,26 +83,24 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(444, 10);
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(444, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 24);
+            this.button1.Size = new System.Drawing.Size(39, 30);
             this.button1.TabIndex = 3;
-            this.button1.Text = "Tìm nội dung";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(595, 12);
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(625, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(78, 24);
+            this.button2.Size = new System.Drawing.Size(48, 32);
             this.button2.TabIndex = 3;
-            this.button2.Text = "Tải lại";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -164,11 +163,14 @@
             // 
             this.addquest_bt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.addquest_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addquest_bt.Location = new System.Drawing.Point(734, 227);
+            this.addquest_bt.Image = ((System.Drawing.Image)(resources.GetObject("addquest_bt.Image")));
+            this.addquest_bt.Location = new System.Drawing.Point(722, 225);
             this.addquest_bt.Name = "addquest_bt";
-            this.addquest_bt.Size = new System.Drawing.Size(170, 45);
+            this.addquest_bt.Size = new System.Drawing.Size(193, 45);
             this.addquest_bt.TabIndex = 5;
             this.addquest_bt.Text = "Thêm câu hỏi";
+            this.addquest_bt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.addquest_bt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.addquest_bt.UseVisualStyleBackColor = true;
             this.addquest_bt.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -176,11 +178,14 @@
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(734, 306);
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.Location = new System.Drawing.Point(722, 307);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(170, 45);
+            this.button4.Size = new System.Drawing.Size(193, 45);
             this.button4.TabIndex = 5;
             this.button4.Text = "Sửa câu hỏi";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -188,11 +193,14 @@
             // 
             this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(734, 378);
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.Location = new System.Drawing.Point(722, 378);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(170, 45);
+            this.button5.Size = new System.Drawing.Size(193, 45);
             this.button5.TabIndex = 5;
             this.button5.Text = "Xóa câu hỏi";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -200,11 +208,14 @@
             // 
             this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(717, 534);
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.Location = new System.Drawing.Point(701, 534);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(198, 45);
+            this.button6.Size = new System.Drawing.Size(230, 45);
             this.button6.TabIndex = 5;
             this.button6.Text = "Thoát ngân hàng";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 

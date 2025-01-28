@@ -57,6 +57,7 @@ namespace QuestBankManager_Project
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi truy vấn tới máy chủ!" + ex.Message, "Lỗi nè", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Error);
+
             }
 
             conn.closeConnection();
@@ -115,6 +116,7 @@ namespace QuestBankManager_Project
 
         private void button2_Click(object sender, EventArgs e)
         {
+            find_tb.Text = null;
             updateListQuest();
             updateNumQuest();
         }

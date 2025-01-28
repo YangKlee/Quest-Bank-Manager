@@ -155,11 +155,11 @@ namespace QuestBankManager_Project
                     MySqlCommand cmd = new MySqlCommand("call addQuestion(@idbank, @stt, @nd, @a, @b, @c,@d, @ans, @user)", conn.getConnection());
                     cmd.Parameters.AddWithValue("@idbank", Data.idbankaccess);
                     cmd.Parameters.AddWithValue("@stt", socauhientai_tb.Text);
-                    cmd.Parameters.AddWithValue("@nd", noidung_tb.Text);
-                    cmd.Parameters.AddWithValue("@a", dapanA_tb.Text);
-                    cmd.Parameters.AddWithValue("@b", dapanB_tb.Text);
-                    cmd.Parameters.AddWithValue("@c", dapanC_tb.Text);
-                    cmd.Parameters.AddWithValue("@d", dapanD_tb.Text);
+                    cmd.Parameters.AddWithValue("@nd", noidung_tb.Text.Trim());
+                    cmd.Parameters.AddWithValue("@a", dapanA_tb.Text.Trim());
+                    cmd.Parameters.AddWithValue("@b", dapanB_tb.Text.Trim());
+                    cmd.Parameters.AddWithValue("@c", dapanC_tb.Text.Trim());
+                    cmd.Parameters.AddWithValue("@d", dapanD_tb.Text.Trim());
                     cmd.Parameters.AddWithValue("@ans", dapAnDung);
                     cmd.Parameters.AddWithValue("@user", Data.loginUser.getUserName());
                     cmd.ExecuteNonQuery();

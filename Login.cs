@@ -36,13 +36,17 @@ namespace QuestBankManager_Project
                 if (result != null && Convert.ToBoolean(result))
                 {
                     Data.loginUser.setUserName(usernameTB.Text);
-                    MessageBox.Show("Đăng nhập thành công!");
+                    MessageBox.Show("Đăng nhập thành công!", "Thông báo", buttons:MessageBoxButtons.OK);
+                    if (checkBox1.Checked)
+                    {
+                        File.WriteAllText("logindata.dat", usernameTB.Text + "\n" +passTB.Text);
+                    }
                     this.Close();
 
                 }
                 else
                 {
-                    MessageBox.Show("Sai tài khoản hoặc mật khẩu");
+                    MessageBox.Show("Sai tài khoản hoặc mật khẩu", "Thông báo", buttons:MessageBoxButtons.OK, icon:MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex) 
@@ -74,11 +78,20 @@ namespace QuestBankManager_Project
             }
             catch
             {
-                MessageBox.Show("Vì lần đầu chạy chương trình,Vui lòng thiết lập kết nối", "Thông báo");
+                MessageBox.Show("Vì lần đầu chạy chương trình,Vui lòng thiết lập kết nối", "Thông báo", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information); ;
                 this.Hide();
                 setting setting = new setting();
                 setting.ShowDialog();
                 this.Show();
+            }
+
+            if (File.Exists("logindata.dat"))
+            {
+                StreamReader reader = new StreamReader("logindata.dat");
+                usernameTB.Text = reader.ReadLine();
+                passTB.Text = reader.ReadLine();
+                button1_Click(sender, e);
+                reader.Close();
             }
         }
     }

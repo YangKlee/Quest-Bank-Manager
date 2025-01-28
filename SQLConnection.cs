@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,6 +33,10 @@ namespace QuestBankManager_Project
             }
             catch(Exception ex) 
             {
+                if(File.Exists("logindata.dat"))
+                {
+                    File.Delete("logindata.dat");
+                }
                 MessageBox.Show("Không thể connect tới máy chủ \n " + ex.Message, "Lỗi nè!",buttons:MessageBoxButtons.OK, icon:MessageBoxIcon.Error);
             }
 

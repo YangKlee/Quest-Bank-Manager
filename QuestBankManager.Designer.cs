@@ -83,22 +83,23 @@
             // find_bt
             // 
             this.find_bt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.find_bt.Image = ((System.Drawing.Image)(resources.GetObject("find_bt.Image")));
             this.find_bt.Location = new System.Drawing.Point(352, 6);
             this.find_bt.Name = "find_bt";
-            this.find_bt.Size = new System.Drawing.Size(47, 23);
+            this.find_bt.Size = new System.Drawing.Size(34, 25);
             this.find_bt.TabIndex = 3;
-            this.find_bt.Text = "Tìm";
             this.find_bt.UseVisualStyleBackColor = true;
             this.find_bt.Click += new System.EventHandler(this.find_bt_Click);
             // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(469, 6);
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.Location = new System.Drawing.Point(489, 7);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(35, 24);
             this.button2.TabIndex = 4;
-            this.button2.Text = "Tải lại";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -151,11 +152,14 @@
             // 
             this.access_bank_bt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.access_bank_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.access_bank_bt.Image = ((System.Drawing.Image)(resources.GetObject("access_bank_bt.Image")));
             this.access_bank_bt.Location = new System.Drawing.Point(585, 120);
             this.access_bank_bt.Name = "access_bank_bt";
             this.access_bank_bt.Size = new System.Drawing.Size(145, 47);
             this.access_bank_bt.TabIndex = 8;
             this.access_bank_bt.Text = "Truy cập";
+            this.access_bank_bt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.access_bank_bt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.access_bank_bt.UseVisualStyleBackColor = true;
             this.access_bank_bt.Click += new System.EventHandler(this.access_bank_bt_Click);
             // 
@@ -163,11 +167,14 @@
             // 
             this.add_bank_bt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.add_bank_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add_bank_bt.Image = ((System.Drawing.Image)(resources.GetObject("add_bank_bt.Image")));
             this.add_bank_bt.Location = new System.Drawing.Point(585, 184);
             this.add_bank_bt.Name = "add_bank_bt";
             this.add_bank_bt.Size = new System.Drawing.Size(145, 47);
             this.add_bank_bt.TabIndex = 8;
             this.add_bank_bt.Text = "Thêm";
+            this.add_bank_bt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.add_bank_bt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.add_bank_bt.UseVisualStyleBackColor = true;
             this.add_bank_bt.Click += new System.EventHandler(this.add_bank_bt_Click);
             // 
@@ -175,11 +182,14 @@
             // 
             this.delete_bank_bt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.delete_bank_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.delete_bank_bt.Image = ((System.Drawing.Image)(resources.GetObject("delete_bank_bt.Image")));
             this.delete_bank_bt.Location = new System.Drawing.Point(587, 309);
             this.delete_bank_bt.Name = "delete_bank_bt";
             this.delete_bank_bt.Size = new System.Drawing.Size(145, 47);
             this.delete_bank_bt.TabIndex = 8;
             this.delete_bank_bt.Text = "Xóa";
+            this.delete_bank_bt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.delete_bank_bt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.delete_bank_bt.UseVisualStyleBackColor = true;
             this.delete_bank_bt.Click += new System.EventHandler(this.delete_bank_bt_Click);
             // 
@@ -187,22 +197,29 @@
             // 
             this.edit_bank_bt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.edit_bank_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.edit_bank_bt.Image = ((System.Drawing.Image)(resources.GetObject("edit_bank_bt.Image")));
             this.edit_bank_bt.Location = new System.Drawing.Point(586, 246);
             this.edit_bank_bt.Name = "edit_bank_bt";
             this.edit_bank_bt.Size = new System.Drawing.Size(144, 47);
             this.edit_bank_bt.TabIndex = 9;
             this.edit_bank_bt.Text = "Sửa";
+            this.edit_bank_bt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.edit_bank_bt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.edit_bank_bt.UseVisualStyleBackColor = true;
+            this.edit_bank_bt.Click += new System.EventHandler(this.edit_bank_bt_Click);
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.Location = new System.Drawing.Point(588, 372);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(144, 47);
             this.button1.TabIndex = 9;
             this.button1.Text = "Xuất";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -214,7 +231,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(252, 13);
             this.label2.TabIndex = 10;
-            this.label2.Text = "@YangKlee closebeta v2.0 Build time: 26/01/2025 \r\n";
+            this.label2.Text = "@YangKlee closebeta v2.2 Build time: 28/01/2025 \r\n";
             // 
             // QuestBankManager
             // 
