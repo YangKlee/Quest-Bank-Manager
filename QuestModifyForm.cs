@@ -86,6 +86,7 @@ namespace QuestBankManager_Project
                 socauhientai_tb.Enabled = false;
                 auto_increase.Visible = false;
                 auto_next_quest.Visible = false;
+                smart_cp_cb.Visible = false;
                 loadQuestEdit();
 
             }
@@ -192,11 +193,11 @@ namespace QuestBankManager_Project
                     cmd = new MySqlCommand("call addQuestion(@idbank, @stt, @nd, @a, @b, @c,@d, @ans, @user)", conn.getConnection());
                     cmd.Parameters.AddWithValue("@idbank", Data.idbankaccess);
                     cmd.Parameters.AddWithValue("@stt", socauhientai_tb.Text);
-                    cmd.Parameters.AddWithValue("@nd", noidung_tb.Text);
-                    cmd.Parameters.AddWithValue("@a", dapanA_tb.Text);
-                    cmd.Parameters.AddWithValue("@b", dapanB_tb.Text);
-                    cmd.Parameters.AddWithValue("@c", dapanC_tb.Text);
-                    cmd.Parameters.AddWithValue("@d", dapanD_tb.Text);
+                    cmd.Parameters.AddWithValue("@nd", noidung_tb.Text.Trim());
+                    cmd.Parameters.AddWithValue("@a", dapanA_tb.Text.Trim());
+                    cmd.Parameters.AddWithValue("@b", dapanB_tb.Text.Trim());
+                    cmd.Parameters.AddWithValue("@c", dapanC_tb.Text.Trim());
+                    cmd.Parameters.AddWithValue("@d", dapanD_tb.Text.Trim());
                     cmd.Parameters.AddWithValue("@ans", dapAnDung);
                     cmd.Parameters.AddWithValue("@user", Data.loginUser.getUserName());
                     cmd.ExecuteNonQuery();
@@ -323,6 +324,47 @@ namespace QuestBankManager_Project
         private void label6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void noidung_tb_Click(object sender, EventArgs e)
+        {
+            if (smart_cp_cb.Checked)
+            {
+                noidung_tb.Text= Clipboard.GetText();
+            }
+
+        }
+
+        private void dapanA_tb_Click(object sender, EventArgs e)
+        {
+            if (smart_cp_cb.Checked)
+            {
+                dapanA_tb.Text = Clipboard.GetText();
+            }
+        }
+
+        private void dapanB_tb_Click(object sender, EventArgs e)
+        {
+            if (smart_cp_cb.Checked)
+            {
+                dapanB_tb.Text = Clipboard.GetText();
+            }
+        }
+
+        private void dapanC_tb_Click(object sender, EventArgs e)
+        {
+            if (smart_cp_cb.Checked)
+            {
+                dapanC_tb.Text = Clipboard.GetText();
+            }
+        }
+
+        private void dapanD_tb_Click(object sender, EventArgs e)
+        {
+            if (smart_cp_cb.Checked)
+            {
+                dapanD_tb.Text = Clipboard.GetText();
+            }
         }
     }
 }

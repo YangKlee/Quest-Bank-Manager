@@ -50,6 +50,7 @@
             this.auto_increase = new System.Windows.Forms.CheckBox();
             this.total_num_quest_tx = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.smart_cp_cb = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -95,6 +96,7 @@
             this.noidung_tb.Name = "noidung_tb";
             this.noidung_tb.Size = new System.Drawing.Size(916, 109);
             this.noidung_tb.TabIndex = 3;
+            this.noidung_tb.Click += new System.EventHandler(this.noidung_tb_Click);
             this.noidung_tb.TextChanged += new System.EventHandler(this.noidung_tb_TextChanged);
             // 
             // label3
@@ -119,6 +121,7 @@
             this.dapanA_tb.Name = "dapanA_tb";
             this.dapanA_tb.Size = new System.Drawing.Size(912, 60);
             this.dapanA_tb.TabIndex = 3;
+            this.dapanA_tb.Click += new System.EventHandler(this.dapanA_tb_Click);
             this.dapanA_tb.TextChanged += new System.EventHandler(this.dapanA_tb_TextChanged);
             // 
             // label4
@@ -144,6 +147,7 @@
             this.dapanB_tb.Name = "dapanB_tb";
             this.dapanB_tb.Size = new System.Drawing.Size(912, 61);
             this.dapanB_tb.TabIndex = 3;
+            this.dapanB_tb.Click += new System.EventHandler(this.dapanB_tb_Click);
             this.dapanB_tb.TextChanged += new System.EventHandler(this.dapanB_tb_TextChanged);
             // 
             // label5
@@ -169,6 +173,7 @@
             this.dapanC_tb.Name = "dapanC_tb";
             this.dapanC_tb.Size = new System.Drawing.Size(912, 61);
             this.dapanC_tb.TabIndex = 3;
+            this.dapanC_tb.Click += new System.EventHandler(this.dapanC_tb_Click);
             this.dapanC_tb.TextChanged += new System.EventHandler(this.dapanC_tb_TextChanged);
             // 
             // label6
@@ -194,6 +199,7 @@
             this.dapanD_tb.Name = "dapanD_tb";
             this.dapanD_tb.Size = new System.Drawing.Size(912, 61);
             this.dapanD_tb.TabIndex = 3;
+            this.dapanD_tb.Click += new System.EventHandler(this.dapanD_tb_Click);
             this.dapanD_tb.TextChanged += new System.EventHandler(this.dapanD_tb_TextChanged);
             // 
             // label7
@@ -322,12 +328,24 @@
             this.label8.TabIndex = 9;
             this.label8.Text = "Tổng số câu hỏi:";
             // 
+            // smart_cp_cb
+            // 
+            this.smart_cp_cb.AutoSize = true;
+            this.smart_cp_cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.smart_cp_cb.Location = new System.Drawing.Point(463, 44);
+            this.smart_cp_cb.Name = "smart_cp_cb";
+            this.smart_cp_cb.Size = new System.Drawing.Size(167, 22);
+            this.smart_cp_cb.TabIndex = 11;
+            this.smart_cp_cb.Text = "Sao chép thông minh";
+            this.smart_cp_cb.UseVisualStyleBackColor = true;
+            // 
             // QuestModifyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(1055, 608);
+            this.Controls.Add(this.smart_cp_cb);
             this.Controls.Add(this.total_num_quest_tx);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.auto_increase);
@@ -382,5 +400,6 @@
         private System.Windows.Forms.CheckBox auto_increase;
         private System.Windows.Forms.Label total_num_quest_tx;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.CheckBox smart_cp_cb;
     }
 }
