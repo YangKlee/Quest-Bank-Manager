@@ -17,7 +17,7 @@ namespace QuestBankManager_Project
         {
             InitializeComponent();
         }
-        public static bool isEditable = false;
+        public static int isEditable = 0;
         // them - isEditable = false
         // sua - isEditable = true
         public void updateNumQuest()
@@ -76,7 +76,7 @@ namespace QuestBankManager_Project
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            isEditable = false;
+            isEditable = 0;
             this.Hide();
             QuestModifyForm frm = new QuestModifyForm();
             frm.ShowDialog();
@@ -125,7 +125,7 @@ namespace QuestBankManager_Project
         {
             if (Data.idquestaccess!=null)
             {
-                isEditable = true;
+                isEditable = 1;
                 QuestModifyForm frm = new QuestModifyForm();
                 frm.ShowDialog();
                 updateListQuest();
@@ -181,6 +181,40 @@ namespace QuestBankManager_Project
             updateNumQuest();
             Data.idquestaccess = null;
 
+        }
+
+        private void questTable_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (Data.idquestaccess != null)
+            {
+                isEditable = 2;
+                QuestModifyForm frm = new QuestModifyForm();
+                frm.ShowDialog();
+                updateListQuest();
+                updateNumQuest();
+            }
+            else
+            {
+                MessageBox.Show("Chưa chọn câu hỏi!", "Thông báo");
+            }
+            Data.idquestaccess = null;
+        }
+
+        private void questTable_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (Data.idquestaccess != null)
+            {
+                isEditable = 2;
+                QuestModifyForm frm = new QuestModifyForm();
+                frm.ShowDialog();
+                updateListQuest();
+                updateNumQuest();
+            }
+            else
+            {
+                MessageBox.Show("Chưa chọn câu hỏi!", "Thông báo");
+            }
+            Data.idquestaccess = null;
         }
     }
 }

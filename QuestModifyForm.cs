@@ -67,7 +67,7 @@ namespace QuestBankManager_Project
         }
         private void QuestModifyForm_Load(object sender, EventArgs e)
         {
-            if (QuestManager.isEditable == false)
+            if (QuestManager.isEditable == 0)
             {
                 this.Text = "Thêm câu hỏi";
                 if (!auto_next_quest.Checked)
@@ -79,16 +79,37 @@ namespace QuestBankManager_Project
                 {
                     auto_increase.Enabled = true;
                 }
+                prev_btn.Visible = false;
+                next_btn.Visible = false;
             }
-            else
+            else if(QuestManager.isEditable == 1)
             {
                 this.Text = "Sửa câu hỏi";
                 socauhientai_tb.Enabled = false;
                 auto_increase.Visible = false;
                 auto_next_quest.Visible = false;
                 smart_cp_cb.Visible = false;
+                prev_btn.Visible = false;
+                next_btn.Visible = false;
                 loadQuestEdit();
 
+            }
+            else
+            {
+                this.Text = "Xem câu hỏi";
+                socauhientai_tb.Enabled = false;
+                auto_increase.Visible = false;
+                auto_next_quest.Visible = false;
+                smart_cp_cb.Visible = false;
+                label7.Visible = false;
+                a_rd.Visible = false;
+                b_rd.Visible = false;
+                c_rd.Visible = false;
+                d_rd.Visible = false;
+                prev_btn.Visible = true;
+                next_btn.Visible = true;
+                button1.Text = "Đóng";
+                loadQuestEdit();
             }
             updateNumQuest();
         }
@@ -146,7 +167,7 @@ namespace QuestBankManager_Project
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            if (QuestManager.isEditable == false)
+            if (QuestManager.isEditable == 0)
             {
                 bool isSuccess = false;
                 SQLConnection conn = new SQLConnection();
@@ -180,7 +201,7 @@ namespace QuestBankManager_Project
                         this.Close();
                 }
             }
-            else
+            else if(QuestManager.isEditable == 1)
             {
                 bool isSuccess = false;
                 SQLConnection conn = new SQLConnection();
@@ -215,6 +236,11 @@ namespace QuestBankManager_Project
                 {
                     this.Close();
                 }
+
+            }
+            else
+            {
+                this.Close();
 
             }
 
@@ -365,6 +391,18 @@ namespace QuestBankManager_Project
             {
                 dapanD_tb.Text = Clipboard.GetText();
             }
+        }
+
+        private void prev_btn_Click(object sender, EventArgs e)
+        {
+            Data.idquestaccess = (Int16.Parse(Data.idquestaccess) - 1).ToString();
+            loadQuestEdit();
+        }
+
+        private void next_btn_Click(object sender, EventArgs e)
+        {
+            Data.idquestaccess = (Int16.Parse(Data.idquestaccess) + 1).ToString();
+            loadQuestEdit();
         }
     }
 }

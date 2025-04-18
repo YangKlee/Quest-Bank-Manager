@@ -49,5 +49,23 @@ namespace QuestBankManager_Project
         {
             con.Close();
         }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // SQLConnection
+            // 
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Name = "SQLConnection";
+            this.Load += new System.EventHandler(this.SQLConnection_Load);
+            this.ResumeLayout(false);
+
+        }
+
+        private void SQLConnection_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

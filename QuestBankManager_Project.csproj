@@ -172,6 +172,9 @@
     <EmbeddedResource Include="setting.resx">
       <DependentUpon>setting.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SQLConnection.resx">
+      <DependentUpon>SQLConnection.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -12,6 +13,16 @@ using System.Windows.Forms;
 
 namespace QuestBankManager_Project
 {
+    struct Question
+    {
+        string stt;
+        string cauhoi;
+        string dapana;
+        string dapanb;
+        string dapanc;
+        string dapand;
+        char trueAns;
+    };
     public partial class QuestBankManager : Form
     {
         public QuestBankManager()
@@ -139,7 +150,77 @@ namespace QuestBankManager_Project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Tính năng này đang được phát triển!", "Thông báo");
+            SaveFileDialog saveFile = new SaveFileDialog();
+            saveFile.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+            saveFile.DefaultExt = "txt"; // Định dạng mặc định
+
+            if(Data.idbankaccess != null && saveFile.ShowDialog() == DialogResult.OK)
+            {
+
+                SQLConnection conn = new SQLConnection();
+                String sqlComm = "select stt, noidung, dapana, dapanb, dapanc, dapand, dapandung from question where idbank = @id";
+                MySqlCommand comm = new MySqlCommand(sqlComm, conn.getConnection());
+                comm.Parameters.AddWithValue("@id", Data.idbankaccess);
+                MySqlDataAdapter dataAdapter = new MySqlDataAdapter(comm);
+                DataSet ds = new DataSet();
+                dataAdapter.Fill(ds, "shikanoko");
+                DataTable dt = ds.Tables["shikanoko"];
+                foreach (DataRow row in dt.Rows)
+                {
+                    string stt = row["stt"].ToString();
+                    string cauhoi = row["noidung"].ToString();
+                    string dapanA = row["dapana"].ToString();
+                    string dapanB = row["dapanb"].ToString();
+                    string dapanC = row["dapanc"].ToString();
+                    string dapanD = row["dapand"].ToString();
+                    string key = row["dapandung"].ToString();
+                    string output = $"Câu {stt}: {cauhoi}\n";
+                    if (key == "A")
+                    {
+                        output += $"*A. {dapanA} \n";
+                    }
+                    else
+                    {
+                        output += $"A. {dapanA} \n";
+                    }
+
+                    if (key == "B")
+                    {
+                        output += $"*B. {dapanB} \n";
+                    }
+                    else
+                    {
+                        output += $"B. {dapanB}\n";
+                    }
+
+                    if (key == "C")
+                    {
+                        output += $"*C. {dapanC}\n";
+                    }
+                    else
+                    {
+                        output += $"C. {dapanC}\n";
+                    }
+
+                    if (key == "D")
+                    {
+                        output += $"*D. {dapanD}\n";
+                    }
+                    else
+                    {
+                        output += $"D. {dapanD}\n";
+                    }
+                    File.AppendAllText(saveFile.FileName, output + Environment.NewLine);
+                    
+                }
+            }
+            else
+            {
+                MessageBox.Show("Chưa chọn ngân hàng");
+            }
+
+
+            
         }
 
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)

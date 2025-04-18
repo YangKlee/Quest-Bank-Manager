@@ -51,6 +51,8 @@
             this.total_num_quest_tx = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.smart_cp_cb = new System.Windows.Forms.CheckBox();
+            this.prev_btn = new System.Windows.Forms.Button();
+            this.next_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -340,12 +342,34 @@
             this.smart_cp_cb.Text = "Sao chép thông minh";
             this.smart_cp_cb.UseVisualStyleBackColor = true;
             // 
+            // prev_btn
+            // 
+            this.prev_btn.Location = new System.Drawing.Point(680, 545);
+            this.prev_btn.Name = "prev_btn";
+            this.prev_btn.Size = new System.Drawing.Size(75, 23);
+            this.prev_btn.TabIndex = 12;
+            this.prev_btn.Text = "prev";
+            this.prev_btn.UseVisualStyleBackColor = true;
+            this.prev_btn.Click += new System.EventHandler(this.prev_btn_Click);
+            // 
+            // next_btn
+            // 
+            this.next_btn.Location = new System.Drawing.Point(770, 545);
+            this.next_btn.Name = "next_btn";
+            this.next_btn.Size = new System.Drawing.Size(75, 23);
+            this.next_btn.TabIndex = 12;
+            this.next_btn.Text = "next";
+            this.next_btn.UseVisualStyleBackColor = true;
+            this.next_btn.Click += new System.EventHandler(this.next_btn_Click);
+            // 
             // QuestModifyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(1055, 608);
+            this.Controls.Add(this.next_btn);
+            this.Controls.Add(this.prev_btn);
             this.Controls.Add(this.smart_cp_cb);
             this.Controls.Add(this.total_num_quest_tx);
             this.Controls.Add(this.label8);
@@ -402,5 +426,7 @@
         private System.Windows.Forms.Label total_num_quest_tx;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.CheckBox smart_cp_cb;
+        private System.Windows.Forms.Button prev_btn;
+        private System.Windows.Forms.Button next_btn;
     }
 }

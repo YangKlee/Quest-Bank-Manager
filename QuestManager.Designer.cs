@@ -55,11 +55,15 @@
             this.questTable.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.questTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.questTable.Location = new System.Drawing.Point(12, 40);
+            this.questTable.MultiSelect = false;
             this.questTable.Name = "questTable";
+            this.questTable.ReadOnly = true;
             this.questTable.Size = new System.Drawing.Size(670, 560);
             this.questTable.TabIndex = 0;
             this.questTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.questTable_CellContentClick);
+            this.questTable.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.questTable_CellContentDoubleClick);
             this.questTable.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.questTable_CellMouseClick);
+            this.questTable.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.questTable_CellMouseDoubleClick);
             // 
             // label1
             // 
